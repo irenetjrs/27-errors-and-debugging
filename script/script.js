@@ -29,6 +29,15 @@ function multiply(values) {
    return +values[0] * +values[2];
 }
 function divide(values) {
-   return +values[0] / +values[2];
+   try{
+   if(values[2] === '0'){
+      throw new Error('You can`t divide by 0');
+   } else{
+      return +values[0] / +values[2]; 
+   }
+} catch(error){
+   console.log(error.name + '-' + error.message)
+   return 0;
 }
-count('5+2');
+}
+count('5/0');
