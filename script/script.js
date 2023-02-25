@@ -90,3 +90,27 @@ function multiply(values) {
 function divide(values) {
    return +values[0] / +values[2]; 
    }
+
+// task 4
+
+function MakeUsers(name, age){
+   this.name = name;
+   this.age = age;
+}
+const user = new MakeUsers('Mike');//Forgot to pass the second parameter
+
+function showMovie(user){
+   try{
+      if(age===undefined){
+         throw new Error();
+      }
+      }catch(error){
+         age = prompt('You forgot to write your age');
+      }
+      if(age >= 18){
+         console.log('You can watch this movie');
+      } else if (age<18){
+         console.log('Sorry, you are too young');
+      }
+   }
+showMovie(user);
